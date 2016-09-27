@@ -87,7 +87,8 @@
                 android:layout_weight="1"
                 android:id="@+id/answerButton1"
                 android:textSize="80sp"
-                style="?android:attr/buttonBarButtonStyle"/>
+                style="?android:attr/buttonBarButtonStyle"
+                android:onClick="submitAnswer" />
 
             <Button
                 tools:text="02"
@@ -96,7 +97,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/answerButton2"
                 android:textSize="80sp"
-                style="?android:attr/buttonBarButtonStyle"/>
+                style="?android:attr/buttonBarButtonStyle"
+                android:onClick="submitAnswer" />
         </TableRow>
 
         <TableRow
@@ -110,7 +112,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/answerButton3"
                 android:textSize="80sp"
-                style="?android:attr/buttonBarButtonStyle"/>
+                style="?android:attr/buttonBarButtonStyle"
+                android:onClick="submitAnswer" />
 
             <Button
                 tools:text="04"
@@ -119,7 +122,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/answerButton4"
                 android:textSize="80sp"
-                style="?android:attr/buttonBarButtonStyle"/>
+                style="?android:attr/buttonBarButtonStyle"
+                android:onClick="submitAnswer" />
         </TableRow>
     </TableLayout>
 
