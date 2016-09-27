@@ -1,38 +1,127 @@
-<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/gridLayout"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.zenbarrier.braintrainer.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/infoBar">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:text="27s"
+            android:layout_height="wrap_content"
+            android:id="@+id/timerText"
+            android:textAlignment="center"
+            android:background="@color/colorTimer"
+            android:paddingBottom="@dimen/default_gap"
+            android:paddingTop="@dimen/default_gap"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            tools:text="8 + 5"
+            android:layout_height="wrap_content"
+            android:id="@+id/questionText"
+            android:textAlignment="center"
+            android:paddingBottom="@dimen/default_gap"
+            android:paddingTop="@dimen/default_gap"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            tools:text="5/16"
+            android:background="@color/colorScore"
+            android:layout_height="wrap_content"
+            android:id="@+id/scoreText"
+            android:textAlignment="center"
+            android:paddingBottom="@dimen/default_gap"
+            android:paddingTop="@dimen/default_gap"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/answerTable">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                tools:text="01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/answerButton1"
+                android:textSize="80sp" />
+
+            <Button
+                tools:text="02"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/answerButton2"
+                android:textSize="80sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                tools:text="03"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/answerButton3"
+                android:textSize="80sp" />
+
+            <Button
+                tools:text="04"
+                android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/answerButton4"
+                android:textSize="80sp" />
+        </TableRow>
+    </TableLayout>
 
     <TextView
-        android:id="@+id/timerText"
+        tools:text="Your score: 5/16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="center"
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1"
-        android:background="@color/colorTimer" />
+        android:layout_below="@+id/answerTable"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/resultText"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp" />
 
-    <TextView
-        android:id="@+id/questionText"
+    <Button
+        android:text="Play Again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="center"
-        app:layout_columnWeight="4"
-        app:layout_rowWeight="1" />
+        android:layout_below="@+id/resultText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:id="@+id/retryButton" />
 
-    <TextView
-        android:id="@+id/scoreText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="center"
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1"
-        android:background="@color/colorScore" />
-</android.support.v7.widget.GridLayout>
+</RelativeLayout>
