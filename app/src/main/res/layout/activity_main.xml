@@ -10,6 +10,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.zenbarrier.braintrainer.MainActivity">
 
+    <Button
+        android:text="@string/buttonText_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="startGame"
+        android:id="@+id/startButton"
+        android:textSize="80sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/gameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -56,8 +72,6 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/infoBar"
-        android:layout_alignParentStart="true"
         android:layout_marginStart="12dp"
         android:layout_marginTop="11dp"
         android:id="@+id/answerTable">
@@ -72,7 +86,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/answerButton1"
-                android:textSize="80sp" />
+                android:textSize="80sp"
+                style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 tools:text="02"
@@ -80,7 +95,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/answerButton2"
-                android:textSize="80sp" />
+                android:textSize="80sp"
+                style="?android:attr/buttonBarButtonStyle"/>
         </TableRow>
 
         <TableRow
@@ -93,7 +109,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/answerButton3"
-                android:textSize="80sp" />
+                android:textSize="80sp"
+                style="?android:attr/buttonBarButtonStyle"/>
 
             <Button
                 tools:text="04"
@@ -101,7 +118,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/answerButton4"
-                android:textSize="80sp" />
+                android:textSize="80sp"
+                style="?android:attr/buttonBarButtonStyle"/>
         </TableRow>
     </TableLayout>
 
@@ -109,19 +127,18 @@
         tools:text="Your score: 5/16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/answerTable"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/resultText"
         android:textSize="40sp"
         android:layout_marginTop="20dp" />
 
     <Button
-        android:text="Play Again"
+        android:text="@string/buttonText_Retry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/resultText"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="28dp"
         android:id="@+id/retryButton" />
+    </LinearLayout>
 
 </RelativeLayout>
